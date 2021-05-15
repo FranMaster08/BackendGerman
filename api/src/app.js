@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 
-require('./db.js');
+//require('./db.js');
 
 const server = express();
 
@@ -15,7 +15,7 @@ server.name = 'API';
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
-server.use(morgan('dev'));
+//server.use(morgan('dev'));
 //Middleware para setear los headers
 server.use(setHeaders);
 //En el archivo index.js coloco las rutas

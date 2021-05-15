@@ -11,11 +11,12 @@ exports.getAllApi = async () => {
 
 
 
-exports.requestApi = async () => {
+exports.requestApi = async (nameRecipe) => {
     
     const requestapi = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
+
     let result = await requestapi.data.results.filter( recipe =>
-    recipe.title.includes(req.query.name)
+        recipe.title.includes(nameRecipe)
     );
     const response = await result.map((recipe) => {
         return {

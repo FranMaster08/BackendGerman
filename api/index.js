@@ -35,3 +35,7 @@ conn.sync({ force: false }).then(() => {
     })
 
 });
+
+// server.listen(3001,()=>{
+//   console.log(`Server is running in Port 3001`);
+// })
